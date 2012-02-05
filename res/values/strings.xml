@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, GpsTestActivity!</string>
+    <string name="app_name">GpsTest</string>
+    <string name="Longitudine">Longitudine</string>
+    <string name="Latitudine"></string>
+    <string name="Latitudine2">Latitudine</string>
+    <string name="Accuracy">Accuracy</string>
+    <string name="button">Button</string>
+    <string name="Start_Recording">Start Recording</string>
+    <string name="Nr_Acquisioni">Nr.Acquisioni</string>
+    <string name="zero">0</string>
+    <string name="Quota">Quota</string>
+    <string name="Tempo_GPS">Tempo GPS</string>
+
+</resources>

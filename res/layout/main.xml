@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget50"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txt_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Accuracy" />
+
+    <EditText
+        android:id="@+id/edit_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:text="@string/Accuracy"
+        android:textSize="14sp" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/txt_lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Latitudine2" />
+
+    <EditText
+        android:id="@+id/edit_lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:text="@string/Latitudine2"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txt_lon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Longitudine" />
+
+    <EditText
+        android:id="@+id/edit_lon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:text="@string/Longitudine"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/rxt_quota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Quota" />
+
+    <EditText
+        android:id="@+id/edit_quota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:text="@string/Quota"
+        android:textSize="14sp" />
+    
+ <TextView
+     android:id="@+id/txt_tempo"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="@string/Tempo_GPS" />
+
+    <EditText
+        android:id="@+id/edit_tempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:text="@string/zero"
+        android:textSize="14sp" />
+    
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Start_Recording" />
+
+</TableLayout>
