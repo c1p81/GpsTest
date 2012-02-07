@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="hello">Hello World, GpsTestActivity!</string>
     <string name="app_name">GpsTest</string>
     <string name="Longitudine">Longitudine</string>
     <string name="Latitudine"></string>
@@ -13,5 +11,6 @@
     <string name="zero">0</string>
     <string name="Quota">Quota</string>
     <string name="Tempo_GPS">Tempo GPS</string>
+    <string name="delete_item">Cancella file dati</string>
 
 </resources>

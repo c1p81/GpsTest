@@ -9,12 +9,17 @@ import java.util.Date;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.os.Environment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,6 +36,7 @@ public class GpsTestActivity extends Activity {
 	
 	private Button btn1; 
 	private int acquisizioni;
+	private boolean deleted;
 	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -146,5 +152,41 @@ public class GpsTestActivity extends Activity {
     }
 
     }/* End of Class MyLocationListener */
-    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.option_menu, menu);
+        return true;
+    }    
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        case R.id.delete_item:
+        	
+            	AlertDialog.Builder conferma_canc = new AlertDialog.Builder(this);
+            	conferma_canc.setTitle("Richiesta conferma");
+            	conferma_canc.setMessage("Cancellazione dati?");
+            	conferma_canc.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+            	  public void onClick(DialogInterface dialog, int id) {
+            		   // Toast.makeText( getApplicationContext(),"Si",Toast.LENGTH_SHORT ).show();
+	               	   File root = Environment.getExternalStorageDirectory();
+	            	   File gpxfile = new File(root, "dati_gps.txt");
+	                   deleted = gpxfile.delete();
+            	  }
+            	});
+            	    	   	
+               	conferma_canc.setNegativeButton("No", new DialogInterface.OnClickListener() {
+              	  public void onClick(DialogInterface dialog, int id) {
+             		   // Toast.makeText( getApplicationContext(),"No",Toast.LENGTH_SHORT ).show();
+//              	    
+              	  }
+              	});
+            AlertDialog alert = conferma_canc.create();
+            alert.show();
+        	
+        	
+              return true;
+        default:
+              return super.onOptionsItemSelected(item);
+        }
+    }
 }
